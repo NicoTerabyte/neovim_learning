@@ -70,7 +70,7 @@ lua's only data structure are the tables and they can be used as lists like in t
 ```lua
 --as a list
 
-local list = {"first}, 2, false, function() print("fourth) end}
+local list = {"first, 2, false, function() print("fourth) end}
 
 print("first index", list[1])
 
@@ -81,4 +81,18 @@ local t = {
     literal_key = "a string"
     ["an expression] = "also works!"
 }
+```
+
+going through a list
+```lua
+local list = { "one", "two"}
+
+for index = 1, #list do
+    print(index, list[index])
+end
+
+-- exercise: do copy and paste here with neovim in visual mode
+
+
+
 ```
