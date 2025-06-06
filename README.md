@@ -47,3 +47,38 @@ local truth, lies = true, false
 local nothing = nil
 
 ```
+
+this is the basic lua language variable decalration:
+
+How to declare functions and use them with lua
+be aware that functions can be values as well in lua language
+```lua
+local function hello(name)
+    print("hello", name)
+end
+
+-- this is a comment function as a value
+
+local greet = function(name)
+    print("hey", name) 
+end
+
+```
+
+lua's only data structure are the tables and they can be used as lists like in the other languages with *indexes* and all.
+
+```lua
+--as a list
+
+local list = {"first}, 2, false, function() print("fourth) end}
+
+print("first index", list[1])
+
+
+
+-- as a map
+local t = {
+    literal_key = "a string"
+    ["an expression] = "also works!"
+}
+```
