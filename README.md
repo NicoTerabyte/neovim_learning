@@ -14,7 +14,7 @@ if use the dw command in normal mode you are able to remove some words by going 
 
 
 ## The modes
-The normal mode for example is the default one that nvim and vim uses to navigate around the text. 
+The normal mode for example is the default one that nvim and vim uses to navigate around the text.
 The visual mode works over normal mode it helps us selecting and manipulating multiple text
 The insert mode as the name suggest is the one that we use to write/insert stuff as a text in the document
 
@@ -60,7 +60,7 @@ end
 -- this is a comment function as a value
 
 local greet = function(name)
-    print("hey", name) 
+    print("hey", name)
 end
 
 ```
@@ -78,8 +78,8 @@ print("first index", list[1])
 
 -- as a map
 local t = {
-    literal_key = "a string"
-    ["an expression] = "also works!"
+    literal_key = "a string",
+    ["an expression"] = "also works!"
 }
 ```
 
@@ -91,8 +91,128 @@ for index = 1, #list do
     print(index, list[index])
 end
 
--- exercise: do copy and paste here with neovim in visual mode
+--indexing into the list
+for index, value ipairs (favorite_accounts) do
+    print(index, value)
+end
+
+-- going through a  map
+--We can't do the same work for a map what we need to do
+local reading_scores = {bro = 9.5, otherBro = "N/A"}
+for key, value in pairs(reading_scores) do
+    print(key, value)
+end
+```
+
+We are heading to the control flow
+```lua
+
+local function action(loves_coffee)
+    if loves_coffee then
+        print("i love coffees")
+    else
+        print("i hate coffees")
+    end
+end
+
+--fact: only nil and false are seen as false valuesx
+```
+
+Modules in lua are particular and most of the time it seems they are setted through maps
+Modules are just files
+```lua
+--foo.lua
+local M = {}
+M.cool_function = function() end
+return M
 
 
+--bar.lua
+--modules are just the result of whatever returns from a file
+-- if they don't return it will rise an error
+local foo = require('foo')
+foo.cool_function()
 
 ```
+
+In lua you can have different returns you can return more values and they should be stored altogheter.
+The thing is that you can choose which value to save when calling the function in order.
+If you don't save all the variables that gets returned the program will discard them
+```lua
+local returns_all = function()
+    return 1, 2, 3, 4
+end
+
+-- the fourth value gets discarded
+first, second, third = returns_all()
+
+```
+
+
+different returns
+```lua
+local variable_arguments = function(...)
+    local arguments = {...}
+    for i, v in iparis({...}) do print(i, v) end
+    return unpack(arguments)
+end
+```
+
+
+metamethods in lua are pretty interesting are practically you set up how tables should work in some specific cases like for example if i ever try to add two tables, what would i sum between them since they store different values?
+
+
+they are defined as rules that lua sets when performing operations with the tables
+
+- a metatables by itself is a table with metamethods
+- there are different metamethods
+- setmetatable it allows us to associate a a metatable with a table
+
+
+common metamethods
+```lua
+local vector_mt = {}
+
+vector_mt.__add = function (left, right)
+    return setmetatable({
+        left[1] + right[1],
+        left[2] + right[2],
+        left[3] + right[3]
+        }, vector_mt)
+end
+
+-- function to create a new vector and to associate it
+-- with the metatable
+
+local function new_vector(x, y, z)
+    return setmetatable({x, y, z}, vector_mt)
+end
+
+-- Test the vector addition
+local v1 = new_vector(1, 2, 3)
+local v2 = new_vector(4, 5, 6)
+local v3 = v1 + v2  -- This will use __add metamethod
+print(v3[1], v3[2], v3[3])  -- Output: 5 7 9
+```
+
+the big idea is that by creating a metatable you can use it's metamethods if you associate the tables with it thanks to setmetatable
+
+some of the most interesting features that the metatables brings are the __index feature that makes you setup a default value for the maps
+
+```lua
+-- Example 2: Default values with __index
+local defaults = {name = "Unknown", age = 0}
+local person_mt = {__index = defaults}
+
+local person = setmetatable({name = "Alice"}, person_mt)
+print(person.name)  -- "Alice" (exists in table)
+print(person.age)   -- 0 (comes from defaults via __index)
+```
+
+
+```lua
+-- simple example of a keymapping in lua for vim
+```
+
+## How does it relate with vim?
+
