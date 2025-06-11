@@ -12,10 +12,13 @@ h -> left
 
 if use the dw command in normal mode you are able to remove some words by going with the cursor at the beginning of one of them and press the *dw* command to delete the word
 
+with dd you delete the entire line
+
 
 ## The modes
 The normal mode for example is the default one that nvim and vim uses to navigate around the text.
-The visual mode works over normal mode it helps us selecting and manipulating multiple text
+The visual mode works over normal mode it helps us selecting and manipulating multiple text with that you can use the yank command to copy for example and use the p that stands for put to paste
+
 The insert mode as the name suggest is the one that we use to write/insert stuff as a text in the document
 
 ## Basic commands
@@ -215,4 +218,15 @@ print(person.age)   -- 0 (comes from defaults via __index)
 ```
 
 ## How does it relate with vim?
+You simply can do scripts in lua to make neovim plugins for example
 
+
+# let's get back to kickstart neovim
+
+
+# little tmux reference for my mental sanity
+ctrl + b w (makes you see the windows that are actually active)
+ctrl + b n (goes to the next window in order of which you have created)
+ctrl + b p it makes go to the previous window 
+ctrl + b
+ctrl + b
