@@ -19,6 +19,9 @@ and with the w command in normal mode you go down one word at a time.
 if you press the p command in normal mode if you have deleted something or you have yanked it you can paste it in nvim.
 it's like ctrl+v
 
+### Something i'm leanring regarding plugins
+It seems that since we have lazy.nvim installed we just need to load in the specific area of the lua file, precisely where the setup of lazy vim starts the table to install the plugin that we need to have it in neovim
+
 ## The modes
 The normal mode for example is the default one that nvim and vim uses to navigate around the text.
 The visual mode works over normal mode it helps us selecting and manipulating multiple text with that you can use the yank command to copy for example and use the p that stands for put to paste
@@ -238,6 +241,26 @@ You simply can do scripts in lua to make neovim plugins for example
 
 
 # let's get back to kickstart neovim
+The configuration of the file, it's where you have all the stuff related to your neovim.
+Just fo example you can find there lazy vim that is the plugin manager and other stuff just right there.
+
+it is written in lua and there different settings of keybinding and keymaps 
+
+
+
+## lsp
+language server protocol, in short neovim speaks a protocol for language servers and needs to know how to do that and how you can make it.
+For example in the kickstart file there's an complete configuartion of some keymaps to tell what the action neovim need to do when those keymaps are pressed.
+In the kickstart file you can find the use of the lsp for the telescope builtin created by a guy that helps to find stuff into the files.
+like for example you have the possibility to find a reference of a word or something like that with the shortcut setted up by the lsp with grr keymaps but that's only related when you code of course:)
+that will use the telescope builtin with the lsp configuration
+
+Another thing, lsp works depending on the programming language so like the telescope shortucts with lsp will only work if you ave setted up the language properly
+_coming soon_
+
+
+Neovim not only needs to know how to make lsp works, but it needs to understand how they run as well.
+This can be achieved with **capabilities**
 
 
 # little tmux reference for my mental sanity
@@ -253,4 +276,4 @@ you enter in copy mode if you do ctrl+b [
 
 from there you can start to move up and down through the the terminal
 
-To exit tmux copy mode you press the esc key
+To exit tmux copy mode you press the esc ke
