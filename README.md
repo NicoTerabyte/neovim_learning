@@ -36,6 +36,11 @@ One of the most important things you can do in visual mode is to yank(copy) the 
 :wq - writes the changes and then quits the file
 :wqa - does the same as above and then quits
 
+## search and normal commands
+to search for stuff in neovim you must write / followed by the stuff you are searching
+if you do instead the classic command setup with _:_ and you write a **!** after it you will be able to put a normal bash command and to execute it in neovim.
+Instead if you need a terminal on the go to test stuff up you must write **/terminal** to open a terminal directly over nvim, to close it you must use the exit command
+
 ## buffer
 
 #### little trivia
