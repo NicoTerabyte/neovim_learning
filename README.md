@@ -39,7 +39,10 @@ One of the most important things you can do in visual mode is to yank(copy) the 
 ## search and normal commands
 to search for stuff in neovim you must write / followed by the stuff you are searching
 if you do instead the classic command setup with _:_ and you write a **!** after it you will be able to put a normal bash command and to execute it in neovim.
-Instead if you need a terminal on the go to test stuff up you must write **/terminal** to open a terminal directly over nvim, to close it you must use the exit command
+Instead if you need a terminal on the go to test stuff up you must write *::terminal** to open a terminal directly over nvim, to close it you must use the exit command
+
+## autocompletion
+If you write a command and meanwhile you press ctrl+d you will see all the possibilities you could write for it and with <tab> you will be able to see a vertical list that will show all the possibilities of any command that has the letter/s of the command in them.
 
 ## buffer
 
