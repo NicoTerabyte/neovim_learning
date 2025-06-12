@@ -14,12 +14,19 @@ if use the dw command in normal mode you are able to remove some words by going 
 
 with dd you delete the entire line
 
+and with the w command in normal mode you go down one word at a time.
+
+if you press the p command in normal mode if you have deleted something or you have yanked it you can paste it in nvim.
+it's like ctrl+v
 
 ## The modes
 The normal mode for example is the default one that nvim and vim uses to navigate around the text.
 The visual mode works over normal mode it helps us selecting and manipulating multiple text with that you can use the yank command to copy for example and use the p that stands for put to paste
 
 The insert mode as the name suggest is the one that we use to write/insert stuff as a text in the document
+
+One of the most important things you can do in visual mode is to yank(copy) the selected lines entirely by just using the y command. You see when in visual mode you are able to highlight the text and if you press y you yank it or copy it 
+
 
 ## Basic commands
 :q - quits from the current file if you didn't save it would tell you
@@ -106,7 +113,6 @@ for key, value in pairs(reading_scores) do
     print(key, value)
 end
 ```
-
 We are heading to the control flow
 ```lua
 
@@ -221,6 +227,8 @@ print(person.age)   -- 0 (comes from defaults via __index)
 You simply can do scripts in lua to make neovim plugins for example
 
 
+
+
 # let's get back to kickstart neovim
 
 
@@ -228,5 +236,13 @@ You simply can do scripts in lua to make neovim plugins for example
 ctrl + b w (makes you see the windows that are actually active)
 ctrl + b n (goes to the next window in order of which you have created)
 ctrl + b p it makes go to the previous window 
-ctrl + b
-ctrl + b
+ctrl + b x close the pannel
+ctrl + b , rename current window 
+
+## Important thing if you want to scroll the stuff written in the terminal
+If you want to scroll the terminal output in tmux first of all you must enter in copy mode
+you enter in copy mode if you do ctrl+b [
+
+from there you can start to move up and down through the the terminal
+
+To exit tmux copy mode you press the esc key
