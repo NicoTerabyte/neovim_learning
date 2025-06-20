@@ -262,6 +262,10 @@ _coming soon_
 Neovim not only needs to know how to make lsp works, but it needs to understand how they run as well.
 This can be achieved with **capabilities**
 
+## The journey through the learning of neovim knowledge
+
+I learned just now how to move between more files in neovim, basically you do the command :Ex and so you will be put in the file explorer of neovim, for a simple and easy fined and switcher for files we have the telescope plugins that by itself when triggered with the ":Telescope" command we search for "find files" in it an then move around our working environment. This is one of the other possible examples that we could find on the internet possibly. 
+
 
 # little tmux reference for my mental sanity
 ctrl + b w (makes you see the windows that are actually active)
@@ -269,6 +273,7 @@ ctrl + b n (goes to the next window in order of which you have created)
 ctrl + b p it makes go to the previous window 
 ctrl + b x close the pannel
 ctrl + b , rename current window 
+
 
 ## Important thing if you want to scroll the stuff written in the terminal
 If you want to scroll the terminal output in tmux first of all you must enter in copy mode
