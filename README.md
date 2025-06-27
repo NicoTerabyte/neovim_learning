@@ -40,7 +40,7 @@ One of the most important things you can do in visual mode is to yank(copy) the 
 :wqa - does the same as above and then quits
 
 ## search and normal commands
-to search for stuff in neovim you must write / followed by the stuff you are searching
+to search for stuff in neovim you must write / followed by the stuff you are searching a thing that i forgot to mention is that in order to move from an instance to another you need to 
 if you do instead the classic command setup with _:_ and you write a **!** after it you will be able to put a normal bash command and to execute it in neovim.
 Instead if you need a terminal on the go to test stuff up you must write *::terminal** to open a terminal directly over nvim, to close it you must use the exit command
 
@@ -240,13 +240,16 @@ You simply can do scripts in lua to make neovim plugins for example
 
 
 
-# let's get back to kickstart neovim
+# let's get back to kickstart/nvChad neovim
 The configuration of the file, it's where you have all the stuff related to your neovim.
 Just fo example you can find there lazy vim that is the plugin manager and other stuff just right there.
+it is written in lua and there different settings of keybinding and keymaps.
+By the way I changed to **nvChad** recently because it was setted up better and 
 
-it is written in lua and there different settings of keybinding and keymaps 
+## keeping track of some useful tools to make my use of nvChad better and easier
+The ff command in normal mode is used to make you able to search files during the use of nvim but only when you use nvdash plugin that can be triggered by the : followed by the nvdash command.
 
-
+the <leader> + h command will bring out a terminal interface down the 
 
 ## lsp
 language server protocol, in short neovim speaks a protocol for language servers and needs to know how to do that and how you can make it.
@@ -265,6 +268,10 @@ This can be achieved with **capabilities**
 ## The journey through the learning of neovim knowledge
 
 I learned just now how to move between more files in neovim, basically you do the command :Ex and so you will be put in the file explorer of neovim, for a simple and easy fined and switcher for files we have the telescope plugins that by itself when triggered with the ":Telescope" command we search for "find files" in it an then move around our working environment. This is one of the other possible examples that we could find on the internet possibly. 
+
+## Something you should check-out
+you should checkout nvChad (Umberto Savoia)
+
 
 
 # little tmux reference for my mental sanity
