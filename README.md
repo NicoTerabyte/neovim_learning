@@ -258,13 +258,15 @@ In the kickstart file you can find the use of the lsp for the telescope builtin 
 like for example you have the possibility to find a reference of a word or something like that with the shortcut setted up by the lsp with grr keymaps but that's only related when you code of course:)
 that will use the telescope builtin with the lsp configuration
 
-Another thing, lsp works depending on the programming language so like the telescope shortucts with lsp will only work if you have setted up the language properly
-
+Another thing, lsp works depending on the programming language so like the telescope shortucts with lsp will only work if you have setted up the language properly.
+Very important checkout wich of lsp you are installing because some
 
 ### lsp for languages interpreters
 One of the most important things with lsp's is that you **MUST** configure it in order to understand which programming language are you working with. It's capabilities are linked to the servers you use, it helps for autocompletion, go-to definitions rename format etc...
 nvim by itself provide an lsp clien you use, it helps for autocompletion, go-to definitions rename format etc...
-nvim by itself provide an lsp clientt
+nvim by itself provide an lsp clientt.
+But why we don't need to follow the full procedure of installation that for example is described here? https://neovim.io/doc/user/lsp.html
+Well nvchad handles all this stuff by himself so the configuration of the client that is needed in the normal neovim setup in order to setup plugins and lsp.
 
 
 Neovim not only needs to know how to make lsp works, but it needs to understand how they run as well.
