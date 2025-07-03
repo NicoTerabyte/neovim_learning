@@ -258,8 +258,13 @@ In the kickstart file you can find the use of the lsp for the telescope builtin 
 like for example you have the possibility to find a reference of a word or something like that with the shortcut setted up by the lsp with grr keymaps but that's only related when you code of course:)
 that will use the telescope builtin with the lsp configuration
 
-Another thing, lsp works depending on the programming language so like the telescope shortucts with lsp will only work if you ave setted up the language properly
-_coming soon_
+Another thing, lsp works depending on the programming language so like the telescope shortucts with lsp will only work if you have setted up the language properly
+
+
+### lsp for languages interpreters
+One of the most important things with lsp's is that you **MUST** configure it in order to understand which programming language are you working with. It's capabilities are linked to the servers you use, it helps for autocompletion, go-to definitions rename format etc...
+nvim by itself provide an lsp clien you use, it helps for autocompletion, go-to definitions rename format etc...
+nvim by itself provide an lsp clientt
 
 
 Neovim not only needs to know how to make lsp works, but it needs to understand how they run as well.
@@ -292,7 +297,10 @@ To exit tmux copy mode you press the esc key
 
 ## Very important: understanding how to config the editor for c++ files
 Twe need to give attention mostly to:
-- masoninstaler (is practically what makes us download the language reader)
-- lsp files so lspconfig.lua it's role is to keep the instruction to activate and configure the lsp installed with mason 
-- the plugin file that we created in order to get the lsp to read and understand c++ language
+- masoninstaller (is practically what makes us download the language reader) We tell it to check every time if the c++ interpreter is installed 
+- lsp files so lspconfig.lua in this case, is the brain of the editor the one that actually checks and understands the language that is being used in the editor, it's pratically the one we need to setup in order to **install the plugins** 
+- the plugin file that we created in order to get the lsp to read and understand c++ language.
 - tsinstaller for the syntax highlighting
+- the plugin.lua file is only to say which files we do setup when opening neovim in our case (then look at mine plugins.lua file) we said to go and install from precise repositories the plugins that we need and then for our lsp configuration we said which file he needs to check in order to install clangd properly and use it for C++ the plugins file in this case is setted up for the masoninstaller and lspconfig
+
+## 
