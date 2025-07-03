@@ -249,7 +249,7 @@ By the way I changed to **nvChad** recently because it was setted up better and
 ## keeping track of some useful tools to make my use of nvChad better and easier
 The ff command in normal mode is used to make you able to search files during the use of nvim but only when you use nvdash plugin that can be triggered by the : followed by the nvdash command.
 
-the <leader> + h command will bring out a terminal interface down the 
+the <leader> + h command will bring out a terminal interface when i say leader i mean the space bar. 
 
 ## lsp
 language server protocol, in short neovim speaks a protocol for language servers and needs to know how to do that and how you can make it.
@@ -288,4 +288,11 @@ you enter in copy mode if you do ctrl+b [
 
 from there you can start to move up and down through the the terminal
 
-To exit tmux copy mode you press the esc ke
+To exit tmux copy mode you press the esc key
+
+## Very important: understanding how to config the editor for c++ files
+Twe need to give attention mostly to:
+- masoninstaler (is practically what makes us download the language reader)
+- lsp files so lspconfig.lua it's role is to keep the instruction to activate and configure the lsp installed with mason 
+- the plugin file that we created in order to get the lsp to read and understand c++ language
+- tsinstaller for the syntax highlighting
